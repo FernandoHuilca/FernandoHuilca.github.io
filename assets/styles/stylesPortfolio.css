@@ -5,31 +5,10 @@
     padding: 0;
 }
 
-.presentacion {
-    background-color: transparent;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 20px;
-    display: flex;
+figure {
+  margin: 0;
+  padding: 0;
 }
-.presentacion .descripcion{
-    background-color: transparent;
-    width: 800;
-    height: 300;
-}
-.presentacion img{
-    border-radius: 150px;
-}
-.presentacion h1{
-    font-size: 50px;
-    text-align: center;
-}
-.presentacion .profesion{
-    font-size: 20px;
-    text-align: center;
-}
-
-
 /* Contenedor principal de la sección portfolio:
    - max-width para diseño centrado y adaptable
    - display:flex para layout en tarjetas
