@@ -1,155 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FernandoHuilca</title>
+    <title>Fernando Huilca — Portfolio</title>
+    <!-- Enlace al CSS (asegúrate de que la ruta exista) -->
+    <link rel="stylesheet" href="assets/styles/stylesPortfolio.css">
+    <link rel="stylesheet" href="assets/styles/indexStyle2.css">
+
 </head>
-    <body>
-        <header>
-            <h1>Fernando Huilca</h1>
-            <img src = "assets/images/perfil.jpg" alt="fotoPerfil" width = 225 height = 225 >
-            <p>Software Engineering Student</p>
-            <p> I'm a Software Engineering student passionate about technology, reading and continuous learning</p>
+<body>
+           <header class="encabezado">
+            <figure id="fotoPerfil">
+                <img src="assets/images/perfil.jpg" alt="Foto de perfil" width="240" height="240">
+            </figure>
+
+            <section class="resumenCorto">
+                <h1 id="nombre">Fernando Huilca</h1>
+                <p id="ocupacion">Ing. Software</p>
+                <p class="descripcion">Estudiante de ingeniería en software de la Escuela Politécnica Nacional, Quito - Ecuador.</p>
+
+                <nav class="enlaces">
+                    <a href="index.html">Sobre mí</a>
+                    <a href="portfolio.html" class="active">Portafolio</a>
+                    <a href="https://github.com/FernandoHuilca" target="_blank">GitHub</a>
+                    <a href="https://fernando-huilca.blogspot.com" target="_blank">Blog</a>
+                </nav>
+            </section>
         </header>
 
+    <!-- Filtros de tecnologías -->
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="java"><img src="https://skillicons.dev/icons?i=java&perline=4"></button>
+            <button class="filter-btn" data-filter="csharp"><img src="https://skillicons.dev/icons?i=cs&perline=4"></button>
+            <button class="filter-btn" data-filter="cpp"> <img src="https://skillicons.dev/icons?i=cpp&perline=4"></button>
+            <button class="filter-btn" data-filter="python"><img src="https://skillicons.dev/icons?i=python&perline=4"></button>
+            <button class="filter-btn" data-filter="web"><img src="https://skillicons.dev/icons?i=html&perline=4"></button>
+            <button class="filter-btn" data-filter="arduino"><img src="https://skillicons.dev/icons?i=arduino&perline=4"></button>
+        </div>
+    </section>
 
-        <nav> 
-                <a href="portfolio.html">Portfolio</a>  <!--target="_blank" no porque quiero que sea la misma pagina y pueda voler-->
-                <a href="https://fernando-huilca.blogspot.com" target="_blank">Blog</a>
-                <a href="https://github.com/FernandoHuilca" target="_blank">GitHub</a>
-                <a href="index.html" </a>About me</a>
-        </nav>
+    <!-- Contenedor de proyectos. Clase 'portfolio' usada por CSS para layout flex responsive -->
+    <div class="projects-wrapper">
+        <section class="portfolio" aria-label="Proyectos">
+            <!-- Orden cronológico: más reciente a más antiguo -->
+        <article class="project-card" data-tech="java web">
+            <header>
+                <h3>Recetario Web — Jakarta EE</h3>
+                <p class="periodo">octubre 2025 - enero 2026</p>
+            </header>
 
+            <figure>
+                <img src="https://github.com/user-attachments/assets/c932429d-1974-4488-991b-d684b53ea05c" alt="Sistema de recetario web con Jakarta EE" width="300" height="200">
+            </figure>
 
-        <section id="portfolio"> 
+            <h4>Descripción</h4>
+            <p>
+                Sistema web de gestión de recetas desarrollado con Jakarta EE y desplegado en Apache Tomcat 10.
+                Utiliza Servlets, JSP, JSTL para el frontend y JPA (EclipseLink) para la persistencia con MySQL.
+                Arquitectura empresarial siguiendo estándares Java EE para mantenibilidad y escalabilidad.
+            </p>
 
-                <section id="C#"> 
-                    <article class="project-card">
-                    <header>
-                        <h3>Knockout Game</h3>
-                        <p><strong>Periodo:</strong> mayo - septiembre 2025</p>
-                    </header>
+            <a class="btn" href="https://github.com/FernandoHuilca/web-recetario" target="_blank" rel="noopener noreferrer">GitHub</a>
 
-                    <figure>
-                        <img src="assets/images/knockoutgame.png" alt="Knockout Game" width="300" height="200">
-                    </figure>
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java (JDK 17+)</li>
+                <li>Jakarta EE (Servlets, JSP, JSTL)</li>
+                <li>MySQL</li>
+                <li>JPA (EclipseLink)</li>
+                <li>Apache Tomcat 10</li>
+                <li>HTML5/CSS3/JavaScript</li>
+            </ul>
+        </article>
 
-                        <h4>Descripción</h4>
-                        <p>
-                        Knockout es un juego de peleas en 2D, donde los jugadores se enfrentan en combates 1vs1 en diversos escenarios.
-                        Fue desarrollado como parte de la materia de Ingeniería en Software y Requerimientos, aplicando conceptos de diseño
-                        de software y trabajo en equipo. El juego está creado en Unity y programado en C#.
-                        </p>
-                        <button> <a href="https://fernandohuilca.itch.io/knockout-game" target="_blank">Jugar</a></button>
+        <article class="project-card" data-tech="csharp">
+            <header>
+                <h3>Knockout Game</h3>
+                <p class="periodo">mayo - septiembre 2025</p>
+            </header>
 
-                        <h4>Tecnologías utilizadas</h4>
-                        <ul>
-                            <li>Unity</li>
-                            <li>C#</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </article>
-                </section>
+            <figure>
+                <img src="https://github.com/user-attachments/assets/4792d064-92c6-489a-9103-e1878fb2fd99" alt="Captura del juego Knockout" width="300" height="200">
+            </figure>
 
-            
-                <section id="Java"> 
-                    <article class="project-card">
-                    <header>
-                        <h3>Fitec</h3>
-                        <p><strong>Periodo:</strong> abril - agosto 2025</p>
-                    </header>
+            <h4>Descripción</h4>
+            <p>
+                Knockout es un juego de peleas en 2D, donde los jugadores se enfrentan en combates 1vs1 en diversos escenarios.
+                Fue desarrollado como parte de la materia de Ingeniería en Software y Requerimientos. El juego está creado en Unity y programado en C#.
+            </p>
 
-                    <figure>
-                        <img src="assets/images/fitec.jpg" alt="FITEC" width="300" height="200">
-                    </figure>
+            <a class="btn" href="https://fernandohuilca.itch.io/knockout-game" target="_blank" rel="noopener noreferrer">Jugar</a>
 
-                        <h4>Descripción</h4>
-                        <p>
-                        FITEC es un sistema de gestión para una red de gimnasios con dos sucursales en Quito (Norte y Sur),
-                         implementando una base de datos distribuida que permite manejar información crítica como clientes, 
-                         instructores, suscripciones y suplementos deportivos.
-                        Este proyecto fue desarrollado como parte de la materia de Bases de Datos Distribuidas, aplicando
-                         conceptos de fragmentación, replicación y consistencia en entornos distribuidos.
-                        </p>
-                        <button> <a href="https://github.com/FernandoHuilca/FITEC-BDD" target="_blank">GitHub</a></button>
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Unity</li>
+                <li>C#</li>
+                <li>GitHub</li>
+            </ul>
+        </article>
 
-                        <h4>Tecnologías utilizadas</h4>
-                        <ul>
-                            <li>Java</li>
-                            <li>SQLServer</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </article>
-                </section>
+         <article class="project-card" data-tech="java">
+            <header>
+                <h3>Fitec</h3>
+                <p class="periodo">abril - agosto 2025</p>
+            </header>
 
+            <figure>
+                <img src="assets/images/fitec.jpg" alt="Captura del proyecto FITEC" width="300" height="200">
+            </figure>
 
+            <h4>Descripción</h4>
+            <p>
+                FITEC es un sistema de gestión para una red de gimnasios en Quito; implementa una base de datos distribuida para clientes, instructores y suscripciones.
+            </p>
 
+            <a class="btn" href="https://github.com/FernandoHuilca/FITEC-BDD" target="_blank" rel="noopener noreferrer">GitHub</a>
 
-                 <section id="Java"> 
-                    <article class="project-card">
-                    <header>
-                        <h3>HellowCode</h3>
-                        <p><strong>Periodo:</strong> abril - agosto 2025</p>
-                    </header>
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java</li>
+                <li>SQLServer</li>
+                <li>GitHub</li>
+            </ul>
+        </article>
 
-                    <figure>
-                        <img src="assets/images/hellowcode.jpg" alt="hellowcode" width="300" height="200">
-                    </figure>
+        <article class="project-card" data-tech="python web">
+            <header>
+                <h3>API Predicción de Notas — Red Neuronal</h3>
+                <p class="periodo">mayo - septiembre 2025</p>
+            </header>
 
-                        <h4>Descripción</h4>
-                        <p>
-                         HelloCode es una plataforma educativa diseñada para facilitar el aprendizaje de diversos lenguajes de programación 
-                         como <strong>Python</strong>, <strong>Java</strong> y <strong>C#</strong>. 
-                         Implementa conceptos de gamificación inspirados en plataformas como Duolingo y Mimo, 
-                         ofreciendo lecciones interactivas, seguimiento de progreso y recompensas virtuales.
-                         </p>
-                        <button> <a href="https://github.com/FernandoHuilca/HelloCode_Software" target="_blank">GitHub</a></button>
+            <figure>
+                <img src="https://github.com/user-attachments/assets/6e1dc6de-1355-4f11-8781-c7af2d86208f" alt="Interfaz de predicción de calificaciones con red neuronal" width="300" height="200">
+            </figure>
 
-                        <h4>Tecnologías utilizadas</h4>
-                        <ul>
-                            <li>Java</li>
-                            <li>SceneBuilder</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </article>
-                </section>
+            <h4>Descripción</h4>
+            <p>
+                API de predicción de calificaciones académicas usando una red neuronal entrenada con TensorFlow 2.15.0.
+                Desplegada en Render con gestión de permisos por subdominio. Interfaz web interactiva que consume la API
+                para predecir notas basándose en datos de entrada del estudiante.
+            </p>
 
+            <a class="btn" href="https://predictgrade.fernandohuilca.com" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+            <a class="btn" href="https://github.com/FernandoHuilca/API-Predecir-Calificacion-Red-Neuronal" target="_blank" rel="noopener noreferrer">GitHub</a>
 
-                <section id="Java"> 
-                    <article class="project-card">
-                    <header>
-                        <h3>Arquitectura Computacional</h3>
-                        <p><strong>Periodo:</strong> Julio - agosto 2024</p>
-                    </header>
-
-                    <figure>
-                        <img src="assets/images/arquitecturabonneuman.png" alt="arquitecturabonneuman" width="300" height="200">
-                    </figure>
-
-                        <h4>Descripción</h4>
-                        <p>
-                         Simulación detallada del funcionamiento de una computadora a nivel de hardware. La simulación 
-                         incluye componentes principales como la memoria principal, la caché, el CPU y los dispositivos 
-                         de entrada y salida.
-                         </p>
-                        <button> <a href="https://github.com/FernandoHuilca/Emulador_Arquitectura_Computacional" target="_blank">GitHub</a></button>
-
-                        <h4>Tecnologías utilizadas</h4>
-                        <ul>
-                            <li>Java</li>
-                            <li>SceneBuilder</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </article>
-                </section>
-               
-                
-
-        </section>
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>Google Colab</li>
+                <li>HTML/CSS/JavaScript</li>
+                <li>Render</li>
+            </ul>
+        </article>
 
 
-        
+        <article class="project-card" data-tech="java">
+            <header>
+                <h3>HelloCode</h3>
+                <p class="periodo">abril - agosto 2025</p>
+            </header>
 
-    </body>
+            <figure>
+                <img src="assets/images/hellowcode.jpg" alt="Captura del proyecto HelloCode" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                HelloCode es una plataforma educativa con lecciones interactivas y gamificación para aprender Python, Java y C#.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/HelloCode_Software" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java</li>
+                <li>SceneBuilder</li>
+                <li>GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="java">
+            <header>
+                <h3>PoliEats — Proyecto EDA</h3>
+                <p class="periodo">julio - septiembre 2024</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/user-attachments/assets/71a11fca-64c9-4acc-af7b-f3b62b103ddb" alt="Interfaz del sistema PoliEats" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                PoliEats es un sistema de gestión para el restaurante de la Escuela Politécnica Nacional. Utiliza estructuras de datos
+                (listas doblemente enlazadas, colas y árboles binarios de búsqueda) para optimizar pedidos, inventarios y reservas,
+                aplicando conceptos de Estructura de Datos y Algoritmos.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/PoliEats_ProyectoEDA" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java</li>
+                <li>JavaFX</li>
+                <li>Scene Builder</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="java">
+            <header>
+                <h3>Arquitectura Computacional</h3>
+                <p class="periodo">julio - agosto 2024</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/user-attachments/assets/1c4fc1fa-5566-456d-913d-83edb9f712f6" alt="Captura del emulador de arquitectura computacional" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                Simulación del funcionamiento de una computadora a nivel hardware: memoria, caché, CPU y E/S.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/Emulador_Arquitectura_Computacional" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java</li>
+                <li>SceneBuilder</li>
+                <li>GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="arduino">
+            <header>
+                <h3>Lector de Huella — Arduino</h3>
+                <p class="periodo">julio 2024</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/FernandoHuilca/EPN-FernandoHuilca/assets/134117009/30840673-4efe-48db-a725-07ff29d5ebae" alt="Sistema de lector de huella con Arduino" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                Sistema de lector de huellas dactilares integrado con base de datos para registro y verificación de usuarios.
+                Implementado en una cerradura electrónica, proporciona control de acceso seguro mediante componentes electrónicos
+                y programación en C con Arduino Uno.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/Electronica_and_Software" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>C</li>
+                <li>Arduino Uno</li>
+                <li>Sensor de Huella</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="java">
+            <header>
+                <h3>Bad Ice Cream — Juego POO</h3>
+                <p class="periodo">noviembre 2023 - marzo 2024</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/FernandoHuilca/EPN-FernandoHuilca/assets/134117009/6fe8b13c-75fc-4401-9d96-d29a2f5620ae" alt="Juego Bad Ice Cream con niveles personalizados" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                Clon del clásico juego Bad Ice Cream desarrollado en Java con POO. Incluye múltiples niveles personalizados politécnicos
+                donde debes recolectar frutas, romper y crear hielo, y evitar monstruos. Proyecto final de Programación II
+                aplicando el paradigma orientado a objetos.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/EPN-FernandoHuilca/tree/main/Segundo%20Semestre/Programación%20II" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>Java</li>
+                <li>POO (Programación Orientada a Objetos)</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="cpp">
+            <header>
+                <h3>Ahorcado en C++</h3>
+                <p class="periodo">mayo - agosto 2023</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/FernandoHuilca/Ahorcado_in_C-/assets/134117009/b4ef5121-3f36-4727-9586-85a6e6eaea3e" alt="Pantalla del juego Ahorcado en C++" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                Proyecto final de Programación I en la EPN. Implementa el clásico juego del ahorcado en C++ utilizando la librería
+                <em>rlutil</em> para la interfaz en consola. Fue mi primer lenguaje y primer proyecto completo.
+                Recomendado compilar y ejecutar en Visual Studio 2022.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/Ahorcado_in_C-" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>C++</li>
+                <li>rlutil</li>
+                <li>Visual Studio 2022</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </article>
+
+        <article class="project-card" data-tech="cpp">
+            <header>
+                <h3>Gestión de Librería</h3>
+                <p class="periodo">mayo - agosto 2023</p>
+            </header>
+
+            <figure>
+                <img src="https://github.com/FernandoHuilca/EPN-FernandoHuilca/assets/134117009/d487c99e-03b0-4635-a6e0-2ea736a3ae92" alt="Sistema de gestión de librería en C++" width="300" height="200">
+            </figure>
+
+            <h4>Descripción</h4>
+            <p>
+                Sistema de gestión para biblioteca desarrollado en C++. Permite alquilar y devolver libros, buscar en la base de datos,
+                agregar nuevos títulos y gestionar el inventario. Incluye sistema de login y una interfaz gráfica en consola
+                mediante la librería <em>rlutil</em>.
+            </p>
+
+            <a class="btn" href="https://github.com/FernandoHuilca/EPN-FernandoHuilca/tree/main/Primer%20Semestre/Programación%20I/Proyecto%20Final" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <h4>Tecnologías utilizadas</h4>
+            <ul>
+                <li>C++</li>
+                <li>rlutil</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </article>
+
+
+
+
+
+
+    </section>
+    </div>
+
+
+
+        <footer class="pie-pagina">
+            <p>&copy; 2025 Fernando Huilca. Todos los derechos reservados.</p>
+            <p>Desarrollado con HTML, CSS y JavaScript</p>
+        </footer>
+
+    <script>
+        // Sistema de filtrado de proyectos
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Actualizar botón activo
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filtrar tarjetas
+                    projectCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            const cardTechs = card.getAttribute('data-tech');
+                            if (cardTechs && cardTechs.includes(filter)) {
+                                card.style.display = 'flex';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
 </html>

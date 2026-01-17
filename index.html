@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FernandoHuilca</title>
+    <link rel="stylesheet" href="assets/styles/indexStyle2.css">
 </head>
     <body>
-       
 
-        <header>
-            <h1>Fernando Huilca</h1>
-            <img src = "assets/images/perfil.jpg" alt="fotoPerfil" width = 225 height = 225 >
-            <p>Software Engineering Student</p>
-            <p> I'm a Software Engineering student passionate about technology, reading and continuous learning</p>
+        <header class="encabezado">
+            <figure id="fotoPerfil">
+                <img src="assets/images/perfil.jpg" alt="Foto de perfil" width="240" height="240">
+            </figure>
+
+            <section class="resumenCorto">
+                <h1 id="nombre">Fernando Huilca</h1>
+                <p id="ocupacion">Ing. Software</p>
+                <p class="descripcion">Estudiante de ingeniería en software de la Escuela Politécnica Nacional, Quito - Ecuador.</p>
+
+                <nav class="enlaces">
+                    <a href="index.html" class="active">Sobre mí</a>
+                    <a href="portfolio.html">Portafolio</a>
+                    <a href="https://github.com/FernandoHuilca" target="_blank">GitHub</a>
+                    <a href="https://fernando-huilca.blogspot.com" target="_blank">Blog</a>
+                </nav>
+            </section>
         </header>
 
+        
+        <div class="contenedor-principal">
+            <aside class="contacto"> 
+                <h2>Contact</h2>
+                <strong>Quito - Ecuador</strong> <br>
+                <strong>LinkedIn: </strong><a href="https://ec.linkedin.com/in/fernando-huilca-a3160826a" target="_blank">Linkedin.com/in/fernando-huilca</a><br>
+              <!--  <strong>Email: </strong><a href="mailto:fernandohuilca3@gmail.com">fernandohuilca3@gmail.com</a><br> -->
+                <strong>Email: </strong><a href="mailto:fernando.huilca@epn.edu.ec">fernando.huilca@epn.edu.ec</a><br>
+                <strong>GitHub: </strong><a href="https://github.com/FernandoHuilca" target="_blank">github.com/FernandoHuilca</a>
+            </aside>
 
-        <nav> 
-                <a href="portfolio.html" </a>Portfolio</a>  <!--target="_blank" no porque quiero que sea la misma pagina y pueda voler-->
-                <a href="https://fernando-huilca.blogspot.com" target="_blank">Blog</a>
-                <a href="https://github.com/FernandoHuilca" target="_blank">GitHub</a>
-                <a href="index.html" </a>About me</a>
-        </nav>
+            <section class="sobre-mi">
+                <h2>About me</h2>
+                <p> I am a sixth-semester Software Engineering student at the National Polytechnic School, with a strong 
+                    background in object-oriented programming, data structures, databases, and web application development.
+                    <br>
+                    My academic experience includes the design and implementation of systems using technologies such as Java, 
+                    C#, Python, HTML/CSS/JavaScript, and SQL Server.
+                    I am particularly interested in backend development, databases, and efficient software design.</p>
+            </section>
+        </div>
 
-
-        <aside> 
-            <h2>Contact</h2>
-            <strong>Quito - Ecuador</strong> <br>
-            <strong>LinkedIn: </strong><a href="https://ec.linkedin.com/in/fernando-huilca-a3160826a" target="_blank">Linkedin.com/in/fernando-huilca</a><br>
-          <!--  <strong>Email: </strong><a href="mailto:fernandohuilca3@gmail.com">fernandohuilca3@gmail.com</a><br> -->
-            <strong>Email: </strong><a href="mailto:fernando.huilca@epn.edu.ec">fernando.huilca@epn.edu.ec</a><br>
-            <strong>GitHub: </strong><a href="https://github.com/FernandoHuilca" target="_blank">github.com/FernandoHuilca</a>
-        </aside>
-
-
-        <section>
-            <h2>About me</h2>
-            <p> I am a sixth-semester Software Engineering student at the National Polytechnic School, with a strong 
-                background in object-oriented programming, data structures, databases, and web application development.
-                My academic experience includes the design and implementation of systems using technologies such as Java, 
-                C#, Python, HTML/CSS/JavaScript, and SQL Server.
-                I am particularly interested in backend development, databases, and efficient software design.</p>
-        </section>
-
-        <section>
+        <section class="experiencia">
         <h2>Experience</h2>
 
             <article>
@@ -90,7 +95,111 @@
             </article>
         </section>
 
+        <section class="habilidades">
+            <h2>Habilidades Técnicas</h2>
 
+            <div class="habilidades-container">
+                <!-- Lenguajes de Programación -->
+                <div class="habilidad-categoria">
+                    <h3>Lenguajes de Programación</h3>
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Java</span>
+                            <span class="habilidad-nivel avanzado">Avanzado</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">C#</span>
+                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">C++</span>
+                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">SQL</span>
+                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="habilidad-categoria">
+                    <h3>Herramientas</h3>
+                    <div class="herramientas-lista">
+                        <span class="herramienta-badge">Git/GitHub</span>
+                        <span class="herramienta-badge">Azure</span>
+                        <span class="herramienta-badge">Metodologías Ágiles</span>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="habilidad-categoria">
+                    <h3>Idiomas</h3>
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Español</span>
+                            <span class="habilidad-nivel nativo">Nativo</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Inglés</span>
+                            <span class="habilidad-nivel intermedio">B2</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Italiano</span>
+                            <span class="habilidad-nivel basico">Básico</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Francés</span>
+                            <span class="habilidad-nivel basico">Básico</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="horario-section">
             <article>
                 <section id="schedule">
                 <h2>Horario de clases</h2>
@@ -148,6 +257,12 @@
                 </section>
 
             </article>
+        </section>
+
+        <footer class="pie-pagina">
+            <p>&copy; 2025 Fernando Huilca. Todos los derechos reservados.</p>
+            <p>Desarrollado con HTML, CSS y JavaScript</p>
+        </footer>
 
     </body>
 </html>
