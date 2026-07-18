@@ -1,111 +1,132 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FernandoHuilca</title>
+    <title>Fernando Huilca</title>
     <link rel="stylesheet" href="assets/styles/indexStyle2.css">
 </head>
     <body>
 
         <header class="encabezado">
             <figure id="fotoPerfil">
-                <img src="assets/images/perfil.jpg" alt="Foto de perfil" width="240" height="240">
+                <img src="assets/images/perfil.jpg" alt="Profile photo" width="240" height="240">
             </figure>
 
             <section class="resumenCorto">
                 <h1 id="nombre">Fernando Huilca</h1>
-                <p id="ocupacion">Ing. Software</p>
-                <p class="descripcion">Estudiante de ingeniería en software de la Escuela Politécnica Nacional, Quito - Ecuador.</p>
+                <p id="ocupacion" data-i18n="ocupacion">Software Engineering Student</p>
+                <p class="descripcion" data-i18n="descripcion">Seventh-semester Software Engineering student at the National Polytechnic School, Quito - Ecuador, focused on web and mobile application development.</p>
 
                 <nav class="enlaces">
-                    <a href="index.html" class="active">Sobre mí</a>
-                    <a href="portfolio.html">Portafolio</a>
+                    <a href="index.html" class="active" data-i18n="nav-about">About me</a>
+                    <a href="portfolio.html" data-i18n="nav-portfolio">Portfolio</a>
                     <a href="https://github.com/FernandoHuilca" target="_blank">GitHub</a>
                     <a href="https://fernando-huilca.blogspot.com" target="_blank">Blog</a>
                 </nav>
+
+                <div class="lang-switch">
+                    <button id="lang-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+                    <button id="lang-es" class="lang-btn" onclick="setLanguage('es')">ES</button>
+                </div>
             </section>
         </header>
 
-        
+
         <div class="contenedor-principal">
-            <aside class="contacto"> 
-                <h2>Contact</h2>
+            <aside class="contacto">
+                <h2 data-i18n="contact-title">Contact</h2>
                 <strong>Quito - Ecuador</strong> <br>
                 <strong>LinkedIn: </strong><a href="https://ec.linkedin.com/in/fernando-huilca-a3160826a" target="_blank">Linkedin.com/in/fernando-huilca</a><br>
-              <!--  <strong>Email: </strong><a href="mailto:fernandohuilca3@gmail.com">fernandohuilca3@gmail.com</a><br> -->
                 <strong>Email: </strong><a href="mailto:fernando.huilca@epn.edu.ec">fernando.huilca@epn.edu.ec</a><br>
                 <strong>GitHub: </strong><a href="https://github.com/FernandoHuilca" target="_blank">github.com/FernandoHuilca</a>
             </aside>
 
             <section class="sobre-mi">
-                <h2>About me</h2>
-                <p> I am a sixth-semester Software Engineering student at the National Polytechnic School, with a strong 
-                    background in object-oriented programming, data structures, databases, and web application development.
-                    <br>
-                    My academic experience includes the design and implementation of systems using technologies such as Java, 
-                    C#, Python, HTML/CSS/JavaScript, and SQL Server.
-                    I am particularly interested in backend development, databases, and efficient software design.</p>
+                <h2 data-i18n="about-title">About me</h2>
+                <p data-i18n="about-text">
+                    I am a seventh-semester Software Engineering student at the National Polytechnic School, with a strong
+                    background in object-oriented programming, data structures, databases, and web and mobile application development.
+                    <br><br>
+                    My academic and personal experience includes designing and building systems with Java, C#, Python,
+                    HTML5/CSS/JavaScript, PHP, and SQL Server. On the web development side, I write semantic HTML5 along with
+                    CSS and JavaScript, and I also work with Python for automated testing using the Django framework together
+                    with Gherkin for behavior-driven web development. I'm particularly interested in backend development,
+                    databases, and efficient, accessible software design.
+                </p>
             </section>
         </div>
 
         <section class="experiencia">
-        <h2>Experience</h2>
+        <h2 data-i18n="experience-title">Experience</h2>
 
             <article>
-                <h3>Academic Instructor</h3>
-                <p>Period: 2024-2025</p>
-                <p>Institution: EPN - LudoLab</p>
-                <p>
-                Instructor for senior citizens and teachers from the Ministry of Education 
-                as part of the digital inclusion project <em>LudoLab</em>, teaching basic computing 
+                <h3 data-i18n="exp1-title">Smart Home Automation Technician</h3>
+                <p data-i18n="exp1-period">Period: 2025 · 1.5 months</p>
+                <p data-i18n="exp1-institution">Institution: Independent project — Cumbayá, Quito</p>
+                <p data-i18n="exp1-desc">
+                Worked for a month and a half on the home automation of a smart house in the Cumbayá area, automating and
+                integrating lighting (Leviton), audio systems (Definitive Technology), automatic irrigation (Rain Bird),
+                alarm systems (Irisco), DVR-based security cameras (Hikvision), and voice-control connectivity through
+                Amazon Alexa.
+                </p>
+            </article>
+
+            <article>
+                <h3 data-i18n="exp2-title">Academic Instructor</h3>
+                <p data-i18n="exp2-period">Period: 2024-2025</p>
+                <p data-i18n="exp2-institution">Institution: EPN - LudoLab</p>
+                <p data-i18n="exp2-desc">
+                Instructor for senior citizens and teachers from the Ministry of Education
+                as part of the digital inclusion project <em>LudoLab</em>, teaching basic computing
                 concepts and internet navigation.
                 </p>
             </article>
 
             <article>
-                <h3>Object-Oriented Programming Instructor</h3>
-                <p>Period: March-April 2025</p>
-                <p>Institution: National Polytechnic School</p>
-                <p>
-                Instructor of Object-Oriented Programming (OOP), covering fundamental principles 
+                <h3 data-i18n="exp3-title">Object-Oriented Programming Instructor</h3>
+                <p data-i18n="exp3-period">Period: March-April 2025</p>
+                <p data-i18n="exp3-institution">Institution: National Polytechnic School</p>
+                <p data-i18n="exp3-desc">
+                Instructor of Object-Oriented Programming (OOP), covering fundamental principles
                 and their application in practical software projects.
                 </p>
             </article>
 
             <article>
-                <h3>Member of the Innovation and Technology Department</h3>
-                <p>Period: February 2025 - Present</p>
-                <p>Institution: EPN - AEIS</p>
-                <p>
-                Active member of the Innovation and Technology Department of the Student Association 
-                of the Faculty of Systems Engineering (AEIS), contributing to technological projects 
+                <h3 data-i18n="exp4-title">Member of the Innovation and Technology Department</h3>
+                <p data-i18n="exp4-period">Period: February 2025 - 2026</p>
+                <p data-i18n="exp4-institution">Institution: EPN - AEIS</p>
+                <p data-i18n="exp4-desc">
+                Active member of the Innovation and Technology Department of the Student Association
+                of the Faculty of Systems Engineering (AEIS), contributing to technological projects
                 and organizing innovation events.
                 </p>
             </article>
 
             <article>
-                <h3>Violinist</h3>
-                <p>Period: 2019-2020</p>
-                <p>Institution: Youth Orchestra</p>
-                <p>
-                Participated as a violinist in the Youth Orchestra, performing in local concerts and 
-                cultural events. Developed teamwork, discipline, and artistic expression through 
+                <h3 data-i18n="exp5-title">Violinist</h3>
+                <p data-i18n="exp5-period">Period: 2019-2020</p>
+                <p data-i18n="exp5-institution">Institution: Youth Orchestra</p>
+                <p data-i18n="exp5-desc">
+                Participated as a violinist in the Youth Orchestra, performing in local concerts and
+                cultural events. Developed teamwork, discipline, and artistic expression through
                 classical music training and orchestral collaboration.
                 </p>
             </article>
         </section>
 
         <section class="habilidades">
-            <h2>Habilidades Técnicas</h2>
+            <h2 data-i18n="skills-title">Technical Skills</h2>
 
             <div class="habilidades-container">
-                <!-- Lenguajes de Programación -->
+                <!-- Programming Languages -->
                 <div class="habilidad-categoria">
-                    <h3>Lenguajes de Programación</h3>
+                    <h3 data-i18n="skills-cat-languages">Programming Languages</h3>
+
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">Java</span>
-                            <span class="habilidad-nivel avanzado">Avanzado</span>
+                            <span class="habilidad-nivel avanzado" data-i18n="lvl-avanzado">Advanced</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 90%"></div>
@@ -114,8 +135,28 @@
 
                     <div class="habilidad-item">
                         <div class="habilidad-header">
+                            <span class="habilidad-nombre">HTML5 / CSS / JavaScript</span>
+                            <span class="habilidad-nivel avanzado" data-i18n="lvl-avanzado">Advanced</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">Python (Django, automated testing, Gherkin)</span>
+                            <span class="habilidad-nivel avanzado" data-i18n="lvl-avanzado">Advanced</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
                             <span class="habilidad-nombre">C#</span>
-                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                            <span class="habilidad-nivel intermedio" data-i18n="lvl-intermedio">Intermediate</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 70%"></div>
@@ -125,7 +166,7 @@
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">C++</span>
-                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                            <span class="habilidad-nivel intermedio" data-i18n="lvl-intermedio">Intermediate</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 70%"></div>
@@ -135,31 +176,57 @@
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">SQL</span>
-                            <span class="habilidad-nivel intermedio">Intermedio</span>
+                            <span class="habilidad-nivel intermedio" data-i18n="lvl-intermedio">Intermediate</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 70%"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Herramientas -->
-                <div class="habilidad-categoria">
-                    <h3>Herramientas</h3>
-                    <div class="herramientas-lista">
-                        <span class="herramienta-badge">Git/GitHub</span>
-                        <span class="herramienta-badge">Azure</span>
-                        <span class="herramienta-badge">Metodologías Ágiles</span>
+                    <div class="habilidad-item">
+                        <div class="habilidad-header">
+                            <span class="habilidad-nombre">PHP</span>
+                            <span class="habilidad-nivel basico" data-i18n="lvl-basico">Basic</span>
+                        </div>
+                        <div class="habilidad-barra">
+                            <div class="habilidad-relleno" style="width: 40%"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Idiomas -->
+                <!-- Tools -->
                 <div class="habilidad-categoria">
-                    <h3>Idiomas</h3>
+                    <h3 data-i18n="skills-cat-tools">Tools</h3>
+                    <div class="herramientas-lista">
+                        <span class="herramienta-badge">Git/GitHub</span>
+                        <span class="herramienta-badge">Azure</span>
+                        <span class="herramienta-badge">Django</span>
+                        <span class="herramienta-badge">UCD / DCU</span>
+                        <span class="herramienta-badge">WCAG</span>
+                        <span class="herramienta-badge">Visual Studio Code</span>
+                        <span class="herramienta-badge">IntelliJ IDEA</span>
+                        <span class="herramienta-badge">PyCharm</span>
+                        <span class="herramienta-badge">Notion</span>
+                        <span class="herramienta-badge">MySQL</span>
+                        <span class="herramienta-badge">SQL Server</span>
+                        <span class="herramienta-badge">Docker</span>
+                        <span class="herramienta-badge">Postman</span>
+                        <span class="herramienta-badge">APIs</span>
+                        <span class="herramienta-badge">Figma</span>
+                        <span class="herramienta-badge">Bash</span>
+                        <span class="herramienta-badge">Scrum</span>
+                        <span class="herramienta-badge">Extreme Programming (XP)</span>
+                        <span class="herramienta-badge">Agile Methodologies</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="habilidad-categoria">
+                    <h3 data-i18n="skills-cat-idiomas">Languages</h3>
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">Español</span>
-                            <span class="habilidad-nivel nativo">Nativo</span>
+                            <span class="habilidad-nivel nativo" data-i18n="lvl-nativo">Native</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 100%"></div>
@@ -179,7 +246,7 @@
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">Italiano</span>
-                            <span class="habilidad-nivel basico">Básico</span>
+                            <span class="habilidad-nivel basico" data-i18n="lvl-basico">Basic</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 40%"></div>
@@ -189,7 +256,7 @@
                     <div class="habilidad-item">
                         <div class="habilidad-header">
                             <span class="habilidad-nombre">Francés</span>
-                            <span class="habilidad-nivel basico">Básico</span>
+                            <span class="habilidad-nivel basico" data-i18n="lvl-basico">Basic</span>
                         </div>
                         <div class="habilidad-barra">
                             <div class="habilidad-relleno" style="width: 40%"></div>
@@ -199,70 +266,11 @@
             </div>
         </section>
 
-        <section class="horario-section">
-            <article>
-                <section id="schedule">
-                <h2>Horario de clases</h2>
-
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Hora</th>
-                        <th>Lunes</th>
-                        <th>Martes</th>
-                        <th>Miércoles</th>
-                        <th>Jueves</th>
-                        <th>Viernes</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>07:00 - 09:00</td>
-                        <td></td>
-                        <td>Gestión de Procesos</td>
-                        <td></td>
-                        <td>Financiera</td>
-                        <td>Construcción</td>
-                    </tr>
-
-                    <tr>
-                        <td>09:00 - 11:00</td>
-                        <td></td>
-                        <td>Construcción</td>
-                        <td>América</td>
-                        <td>Calidad</td>
-                        <td>Calidad</td>
-                    </tr>
-
-                    <tr>
-                        <td>11:00 - 13:00</td>
-                        <td>Aplicaciones Web</td>
-                        <td>Aplicaciones Web</td>
-                        <td>Seguridad</td>
-                        <td></td>
-                        <td>Seguridad</td>
-                    </tr>
-
-                    <tr>
-                        <td>14:00 - 16:00</td>
-                        <td></td>
-                        <td>Ágiles</td>
-                        <td></td>
-                        <td></td>
-                        <td>Ágiles</td>
-                    </tr>
-                    </tbody>
-                </table>
-                </section>
-
-            </article>
-        </section>
-
         <footer class="pie-pagina">
-            <p>&copy; 2025 Fernando Huilca. Todos los derechos reservados.</p>
-            <p>Desarrollado con HTML, CSS y JavaScript</p>
+            <p data-i18n="footer-copy">© 2026 Fernando Huilca. All rights reserved.</p>
+            <p data-i18n="footer-tech">Built with HTML, CSS and JavaScript</p>
         </footer>
 
+        <script src="assets/js/lang.js"></script>
     </body>
 </html>
