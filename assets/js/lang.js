@@ -18,6 +18,15 @@ const translations = {
   },
   "experience-title": { en: "Experience", es: "Experiencia" },
 
+  "exp6-title": { en: "Data Mining and Sales Analytics", es: "Minería de Datos y Analítica de Ventas" },
+  "exp6-period": { en: "Period: July 2026", es: "Periodo: Julio 2026" },
+  "exp6-client": { en: "Client: Coati's Coffee House", es: "Cliente: Coati's Coffee House" },
+  "exp6-desc": {
+    en: "Developed, in a team of 5, cross-selling models (Apriori) and customer segmentation (RFM + K-Means) on the real sales history of a specialty coffee shop in Quito, integrated into an interactive dashboard presented to the owner.",
+    es: "Desarrollé, en un equipo de 5 personas, modelos de venta cruzada (Apriori) y segmentación de clientes (RFM + K-Means) utilizando el historial real de ventas de una cafetería especializada en Quito, integrados en un dashboard interactivo presentado al propietario."
+  },
+  "exp6-technologies": { en: "<strong>Technologies:</strong> Python, Pandas, PostgreSQL, Streamlit", es: "<strong>Tecnologías:</strong> Python, Pandas, PostgreSQL, Streamlit" },
+
   "exp1-title": { en: "Smart Home Automation Technician", es: "Técnico en Domótica de Casa Inteligente" },
   "exp1-period": { en: "Period: 2025 · 1.5 months", es: "Periodo: 2025 · mes y medio" },
   "exp1-institution": { en: "Institution: Independent project — Cumbayá, Quito", es: "Institución: Proyecto independiente — Cumbayá, Quito" },
@@ -73,6 +82,17 @@ const translations = {
 
   // ---------- portfolio.html ----------
   "filter-all": { en: "All", es: "Todos" },
+
+  "proj13-title": { en: "Coati's Coffee House — Sales Analytics", es: "Coati's Coffee House — Analítica de Ventas" },
+  "proj13-period": { en: "July 2026", es: "Julio 2026" },
+  "proj13-desc": {
+    en: "As a Data Scientist on a team of 5, developed a sales analytics solution for a Quito specialty coffee shop. Applied Apriori for cross-selling rules and RFM with K-Means for customer segmentation, integrating the results into an interactive dashboard and presenting them to the owner with a proposed cloud architecture.",
+    es: "Como Data Scientist en un equipo de 5 personas, desarrollé una solución de analítica de ventas para una cafetería de especialidad de Quito. Apliqué Apriori para identificar reglas de venta cruzada y RFM con K-Means para segmentar clientes, integrando los resultados en un dashboard interactivo presentado al propietario junto con una propuesta de arquitectura cloud."
+  },
+  "proj13-tech": {
+    en: "<li>Python</li><li>Pandas</li><li>PostgreSQL</li><li>Streamlit</li><li>Apriori</li><li>RFM + K-Means</li>",
+    es: "<li>Python</li><li>Pandas</li><li>PostgreSQL</li><li>Streamlit</li><li>Apriori</li><li>RFM + K-Means</li>"
+  },
 
   "proj1-title": { en: "BibioTec — Accessible Digital Library", es: "BibioTec — Biblioteca Digital Accesible" },
   "proj1-period": { en: "2026", es: "2026" },
